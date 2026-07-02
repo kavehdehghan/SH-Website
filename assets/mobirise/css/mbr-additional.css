@@ -2820,3 +2820,384 @@ a {
 .cid-vk5XV1v0BB .content-head {
   max-width: 800px;
 }
+
+.bluemaat-pathways {
+  padding: 7.5rem 0 1.5rem;
+  background: #edefeb;
+}
+.pathway-head {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+.advisory-kicker,
+.advisory-section-head span,
+.advisory-contact span {
+  color: #08777b;
+  font-family: 'Arimo', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.pathway-head h2 {
+  color: #06244f;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0;
+}
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.pathway-card {
+  background: #ffffff;
+  border: 1px solid rgba(6, 36, 79, 0.12);
+  border-radius: 6px;
+  color: #1b1f0a;
+  display: block;
+  min-height: 10rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.pathway-card:hover {
+  border-color: #0b5f8a;
+  color: #1b1f0a;
+  transform: translateY(-2px);
+}
+.pathway-card.primary {
+  background: #eef7fc;
+  border-color: rgba(11, 95, 138, 0.28);
+  box-shadow: 0 12px 28px rgba(6, 36, 79, 0.08);
+}
+.pathway-card strong {
+  display: block;
+  color: #06244f;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.pathway-card p {
+  color: #42536a;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.advisory-page {
+  background: #ffffff;
+  color: #071f43;
+}
+.advisory-page .navbar {
+  background: #ffffff;
+}
+.advisory-hero {
+  background: linear-gradient(105deg, #ffffff 0%, #ffffff 48%, #06244f 48%, #06244f 100%);
+  padding: 8rem 0 2rem;
+}
+.advisory-hero-grid {
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 3rem;
+}
+.advisory-hero-copy {
+  padding: 2rem 0;
+}
+.advisory-hero h1,
+.advisory-section h2,
+.advisory-contact h2 {
+  color: #071f43;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.advisory-hero h1 {
+  font-size: 3.45rem;
+  line-height: 1;
+  margin: 1rem 0 1.25rem;
+  max-width: 760px;
+}
+.advisory-hero p {
+  color: #162b4d;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  max-width: 650px;
+}
+.advisory-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.advisory-page .btn {
+  border-radius: 6px;
+  box-shadow: none;
+  font-family: 'Arimo', sans-serif;
+  letter-spacing: 0;
+}
+.advisory-page .btn-primary,
+.advisory-page .btn-primary:active,
+.advisory-page .btn-primary.active {
+  background-color: #0b5f8a !important;
+  border-color: #0b5f8a !important;
+  color: #ffffff !important;
+}
+.advisory-page .btn-primary:hover,
+.advisory-page .btn-primary:focus {
+  background-color: #084c70 !important;
+  border-color: #084c70 !important;
+  color: #ffffff !important;
+}
+.advisory-page .btn-secondary,
+.advisory-page .btn-secondary:active,
+.advisory-page .btn-secondary.active {
+  background-color: #eef4f8 !important;
+  border-color: #d6e4ec !important;
+  color: #06244f !important;
+}
+.advisory-page .btn-secondary:hover,
+.advisory-page .btn-secondary:focus {
+  background-color: #dbe9f1 !important;
+  border-color: #c4d8e4 !important;
+  color: #06244f !important;
+}
+.advisory-areas {
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+}
+.advisory-areas div {
+  border: 1px solid rgba(160, 226, 225, 0.28);
+  min-height: 11rem;
+  padding: 1.5rem;
+}
+.advisory-areas .mbr-iconfont {
+  color: #2bb6b7;
+  display: block;
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+}
+.advisory-areas strong {
+  color: #ffffff;
+  display: block;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+.advisory-areas p {
+  color: #dfeff0;
+  font-size: 1rem;
+  line-height: 1.45;
+  margin: 0;
+}
+.advisory-proof-strip {
+  background: #f3f7fa;
+  border: 1px solid rgba(6, 36, 79, 0.14);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+.advisory-proof-strip div {
+  padding: 1.25rem 1.5rem;
+}
+.advisory-proof-strip div + div {
+  border-left: 1px solid rgba(6, 36, 79, 0.14);
+}
+.advisory-proof-strip strong,
+.advisory-proof-strip span {
+  display: block;
+  font-family: 'Arimo', sans-serif;
+}
+.advisory-proof-strip strong {
+  color: #071f43;
+  font-size: 1.15rem;
+}
+.advisory-proof-strip span {
+  color: #42536a;
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+.advisory-section {
+  padding: 5rem 0;
+}
+.advisory-section.tinted {
+  background: #f3f8f8;
+}
+.advisory-section-head {
+  max-width: 920px;
+  margin-bottom: 2rem;
+}
+.advisory-section h2,
+.advisory-contact h2 {
+  font-size: 3rem;
+  line-height: 1.08;
+  margin: 0.75rem 0 1rem;
+}
+.advisory-section-head p {
+  color: #263b59;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  margin: 0;
+}
+.advisory-card-grid {
+  display: grid;
+  gap: 1rem;
+}
+.advisory-card-grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.advisory-card-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.advisory-card,
+.advisory-benefits div {
+  background: #ffffff;
+  border: 1px solid rgba(7, 31, 67, 0.14);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+.advisory-card span {
+  color: #08777b;
+  display: block;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.advisory-card h3 {
+  color: #071f43;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+.advisory-card p,
+.advisory-card li,
+.advisory-benefits span {
+  color: #243a59;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.advisory-card p {
+  margin: 0;
+}
+.advisory-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.advisory-card li + li {
+  margin-top: 0.65rem;
+}
+.advisory-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.advisory-benefits strong {
+  color: #08777b;
+  display: block;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+.advisory-contact {
+  background: #06244f;
+  padding: 3rem 0;
+}
+.advisory-contact .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.advisory-contact h2,
+.advisory-contact span {
+  color: #ffffff;
+}
+.advisory-contact h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0;
+}
+.advisory-contact span {
+  color: #2bb6b7;
+}
+
+@media (max-width: 991px) {
+  .bluemaat-pathways {
+    padding-top: 6.5rem;
+  }
+  .pathway-grid,
+  .advisory-hero-grid,
+  .advisory-proof-strip,
+  .advisory-card-grid.four,
+  .advisory-card-grid.three,
+  .advisory-benefits {
+    grid-template-columns: 1fr;
+  }
+  .pathway-head {
+    align-items: start;
+    flex-direction: column;
+  }
+  .advisory-hero {
+    background: #ffffff;
+    padding-top: 7rem;
+  }
+  .advisory-areas {
+    background: #06244f;
+    grid-template-columns: 1fr;
+  }
+  .advisory-hero h1 {
+    font-size: 3rem;
+  }
+  .advisory-section h2,
+  .advisory-contact h2 {
+    font-size: 2.35rem;
+  }
+  .advisory-proof-strip div + div {
+    border-left: 0;
+    border-top: 1px solid rgba(8, 119, 123, 0.16);
+  }
+  .advisory-contact .container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575px) {
+  .pathway-card {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+  .pathway-card strong {
+    font-size: 1.35rem;
+  }
+  .advisory-hero h1 {
+    font-size: 2.45rem;
+  }
+  .advisory-hero p,
+  .advisory-section-head p {
+    font-size: 1rem;
+  }
+  .advisory-actions .btn,
+  .advisory-contact .btn {
+    width: 100%;
+  }
+}
