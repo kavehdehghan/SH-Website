@@ -2822,7 +2822,7 @@ a {
 }
 
 .bluemaat-pathways {
-  padding: 7.5rem 0 1.5rem;
+  padding: 8.75rem 0 1.5rem;
   background: #edefeb;
 }
 .pathway-head {
@@ -3142,7 +3142,7 @@ a {
 
 @media (max-width: 991px) {
   .bluemaat-pathways {
-    padding-top: 6.5rem;
+    padding-top: 8rem;
   }
   .pathway-grid,
   .advisory-hero-grid,
