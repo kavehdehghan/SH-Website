@@ -3870,6 +3870,10 @@ body.home-page .layer-outcome {
   padding: clamp(1.35rem, 2.4vw, 2rem);
 }
 
+body.home-page .layer-outcome > div {
+  min-width: 0;
+}
+
 body.home-page .layer-outcome span {
   color: var(--bm-blue-600);
   display: block;
@@ -3908,6 +3912,17 @@ body.home-page .layer-outcome li {
   line-height: 1.15;
   min-height: 3rem;
   padding: 0.75rem 0.85rem;
+}
+
+body.home-page .layer-outcome-note {
+  color: var(--bm-blue-700);
+  font-family: 'Inter Tight', 'Arimo', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 850;
+  grid-column: 1 / -1;
+  line-height: 1.25;
+  margin: 0;
+  text-align: center;
 }
 
 body.home-page .cid-vk5XV1v0BB {
