@@ -3892,6 +3892,22 @@ body.home-page .layer-outcome strong {
   line-height: 1.12;
 }
 
+body.home-page .layer-outcome .layer-differentiator span {
+  color: var(--bm-navy-900);
+  display: block;
+  font-size: inherit;
+  font-weight: 850;
+  letter-spacing: 0;
+  line-height: 1.12;
+  margin: 0;
+  text-transform: none;
+}
+
+body.home-page .layer-outcome .layer-differentiator span + span {
+  color: var(--bm-blue-700);
+  margin-top: 0.25rem;
+}
+
 body.home-page .layer-outcome ul {
   display: grid;
   gap: 0.55rem;
