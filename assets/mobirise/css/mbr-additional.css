@@ -4752,6 +4752,54 @@ body.advisory-page .cid-vcs4sY60rR .container {
   box-shadow: none !important;
 }
 
+body.home-page .cid-vcs4sY60rR,
+body.advisory-page #menu03-advisory {
+  background: transparent !important;
+  height: 0;
+  left: 0;
+  pointer-events: none;
+  position: fixed !important;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
+body.home-page .cid-vcs4sY60rR .navbar,
+body.advisory-page #menu03-advisory .navbar {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  left: auto !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  position: fixed !important;
+  right: max(1rem, calc((100vw - 1180px) / 2)) !important;
+  top: 0.85rem !important;
+  transform: none !important;
+  transition: none !important;
+  width: auto !important;
+}
+
+body.home-page .cid-vcs4sY60rR .container,
+body.advisory-page #menu03-advisory .container {
+  background: transparent !important;
+  gap: 0;
+  justify-content: flex-end;
+  max-width: none;
+  min-height: 0;
+  padding: 0 !important;
+  width: auto;
+}
+
+body.home-page .cid-vcs4sY60rR .brand-pathway-actions,
+body.advisory-page #menu03-advisory .brand-pathway-actions {
+  margin-left: 0;
+  pointer-events: auto;
+}
+
 @media (max-width: 991px) {
   body.home-page .bluemaat-signal-panel {
     min-height: auto;
