@@ -4161,27 +4161,20 @@ body.home-page .brand-pathway-link span {
 
 .bm-hero-brand {
   align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(4, 21, 47, 0.2);
   display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-  margin-bottom: 2.25rem;
-  width: fit-content;
+  margin-bottom: 1.6rem;
+  padding: 0.35rem 0.75rem;
+  width: min(8.9rem, 40vw);
 }
 
 .bm-hero-brand img {
-  filter: drop-shadow(0 14px 34px rgba(143, 233, 243, 0.22)) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.18));
-  height: clamp(2.8rem, 5vw, 4.4rem);
+  display: block;
+  height: auto;
   object-fit: contain;
-  width: clamp(9.5rem, 18vw, 16rem);
-}
-
-.bm-hero-brand span {
-  color: #ffffff;
-  font-family: 'Aptos Display', Aptos, 'Inter Tight', 'Arimo', sans-serif;
-  font-size: clamp(1.45rem, 2.7vw, 2.45rem);
-  font-weight: 400;
-  line-height: 1;
-  text-shadow: 0 12px 28px rgba(4, 21, 47, 0.45);
+  width: 100%;
 }
 
 .bm-hero__copy p {
@@ -4785,7 +4778,7 @@ body.advisory-page #menu03-advisory .navbar {
   padding: 0 !important;
   position: absolute !important;
   right: 0 !important;
-  top: 1.15rem !important;
+  top: 0.45rem !important;
   transform: none !important;
   transition: none !important;
   width: 100% !important;
@@ -4815,7 +4808,7 @@ body.home-page .brand-nav,
 body.advisory-page .brand-nav {
   align-items: center;
   display: flex;
-  gap: clamp(1.2rem, 3vw, 2.4rem);
+  gap: clamp(1rem, 2.4vw, 1.8rem);
   pointer-events: auto;
 }
 
@@ -4825,11 +4818,12 @@ body.advisory-page .brand-nav a,
 body.advisory-page .brand-nav span {
   color: rgba(255, 255, 255, 0.82);
   font-family: 'Inter Tight', 'Arimo', sans-serif;
-  font-size: clamp(0.95rem, 1.35vw, 1.16rem);
+  font-size: clamp(0.82rem, 1.05vw, 1rem);
   font-weight: 650;
   line-height: 1;
   position: relative;
   text-decoration: none;
+  text-shadow: 0 6px 18px rgba(4, 21, 47, 0.35);
 }
 
 body.home-page .brand-nav span,
@@ -4843,7 +4837,7 @@ body.home-page .brand-nav span::after,
 body.advisory-page .brand-nav span::after {
   background: var(--bm-cyan-300);
   border-radius: 999px;
-  bottom: -0.45rem;
+  bottom: -0.35rem;
   content: "";
   height: 2px;
   left: 0;
