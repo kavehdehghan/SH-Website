@@ -4145,7 +4145,7 @@ body.home-page .brand-pathway-link span {
 }
 
 .bm-hero__inner {
-  align-items: end;
+  align-items: start;
   display: grid;
   gap: clamp(2rem, 5vw, 5rem);
   grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.72fr);
@@ -4155,8 +4155,15 @@ body.home-page .brand-pathway-link span {
 }
 
 .bm-hero h1 {
-  font-size: clamp(2.65rem, 5.5vw, 5.35rem);
-  max-width: 880px;
+  font-size: clamp(2.25rem, 4.55vw, 4.45rem);
+  margin: auto 0;
+  max-width: 760px;
+}
+
+.bm-hero__copy {
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(31rem, 68vh, 39rem);
 }
 
 .bm-hero-brand {
@@ -4181,7 +4188,7 @@ body.home-page .brand-pathway-link span {
   color: rgba(255, 255, 255, 0.8);
   font-size: clamp(1.15rem, 2vw, 1.55rem);
   line-height: 1.45;
-  margin: 1.7rem 0 0;
+  margin: 0;
   max-width: 720px;
 }
 
@@ -4222,6 +4229,7 @@ body.home-page .brand-pathway-link span {
   border-radius: 8px;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
   padding: 1.4rem;
+  transform: translateY(0.7rem);
 }
 
 .bm-engine-card > span,
@@ -4879,6 +4887,10 @@ body.advisory-page .brand-nav span::after {
   .bm-hero__inner {
     min-height: auto;
   }
+
+  .bm-hero__copy {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4949,6 +4961,14 @@ body.advisory-page .brand-nav span::after {
 
   .bm-hero {
     padding: 11rem 1rem 4rem;
+  }
+
+  .bm-hero h1 {
+    margin: 1.5rem 0;
+  }
+
+  .bm-hero__copy p {
+    margin-top: 0;
   }
 
   .bm-problem-grid,
