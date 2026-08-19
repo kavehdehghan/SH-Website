@@ -4488,6 +4488,26 @@ body.home-page .brand-pathway-link span {
   border-color: var(--bm-line);
 }
 
+.bm-product-visual {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(33, 214, 201, 0.16), transparent 30%),
+    linear-gradient(135deg, #ffffff, var(--bm-ice-100));
+  border: 1px solid var(--bm-line);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(4, 21, 47, 0.12);
+  margin-top: 1.2rem;
+  overflow: hidden;
+  padding: clamp(0.6rem, 1.6vw, 1.15rem);
+}
+
+.bm-product-visual img {
+  border: 1px solid rgba(11, 47, 93, 0.08);
+  border-radius: 6px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 .bm-stack h3,
 .bm-missing-layer h3,
 .bm-platform-card h3 {
