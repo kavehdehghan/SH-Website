@@ -4383,10 +4383,7 @@ body.home-page .brand-pathway-link span {
 .bm-engine-flow article,
 .bm-stack,
 .bm-missing-layer,
-.bm-platform-card,
-.bm-disciplines,
-.bm-learning-loop,
-.bm-moat-proof {
+.bm-platform-card {
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(143, 233, 243, 0.18);
   border-radius: 8px;
@@ -4398,10 +4395,7 @@ body.home-page .brand-pathway-link span {
 .bm-engine-flow h3,
 .bm-stack h3,
 .bm-missing-layer h3,
-.bm-platform-card h3,
-.bm-disciplines h3,
-.bm-learning-loop h3,
-.bm-moat-proof h3 {
+.bm-platform-card h3 {
   color: #ffffff;
   font-family: 'Inter Tight', 'Arimo', sans-serif !important;
   font-size: 1.35rem;
@@ -4413,7 +4407,6 @@ body.home-page .brand-pathway-link span {
 .bm-problem-grid p,
 .bm-engine-flow p,
 .bm-missing-layer p,
-.bm-moat-proof p,
 .bm-value-grid span,
 .bm-stack span {
   color: rgba(255, 255, 255, 0.7);
@@ -4589,7 +4582,6 @@ body.home-page .brand-pathway-link span {
 }
 
 .bm-technology,
-.bm-moat,
 .bm-proof {
   background:
     linear-gradient(135deg, rgba(6, 77, 255, 0.14), transparent 34%),
@@ -4661,95 +4653,140 @@ body.home-page .brand-pathway-link span {
   color: var(--bm-muted);
 }
 
-.bm-moat-layout {
+.bm-value-simulator {
+  background:
+    radial-gradient(circle at 16% 22%, rgba(50, 199, 223, 0.18), transparent 34%),
+    radial-gradient(circle at 82% 28%, rgba(6, 77, 255, 0.2), transparent 32%),
+    linear-gradient(135deg, var(--bm-navy-950), var(--bm-navy-900));
+}
+
+.bm-value-simulator__inner {
   align-items: stretch;
   display: grid;
-  gap: 1.2rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
 }
 
-.bm-disciplines,
-.bm-learning-loop {
-  display: grid;
-  grid-auto-rows: min-content;
-}
-
-.bm-disciplines {
-  gap: 0.75rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.bm-disciplines h3,
-.bm-learning-loop h3 {
-  grid-column: 1 / -1;
-  margin: 0 0 0.25rem;
-}
-
-.bm-disciplines div,
-.bm-moat-proof p {
-  align-items: flex-start;
+.bm-value-simulator__copy {
   background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(143, 233, 243, 0.14);
+  border: 1px solid rgba(143, 233, 243, 0.18);
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.78);
-  display: flex;
-  gap: 0.75rem;
-  margin: 0;
-  min-height: 4.1rem;
-  padding: 0.75rem;
+  padding: clamp(1.4rem, 3vw, 2.6rem);
 }
 
-.bm-disciplines span {
-  color: var(--bm-cyan-300);
-  flex: 0 0 auto;
-  font-weight: 900;
-}
-
-.bm-learning-loop ol {
-  counter-reset: loop;
-  display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.bm-learning-loop li {
-  align-items: center;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(143, 233, 243, 0.14);
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 0.78);
-  display: flex;
-  min-height: 4.1rem;
-  padding: 0.75rem 0.85rem;
-}
-
-.bm-learning-loop li:last-child {
-  grid-column: 1 / -1;
-  justify-content: center;
-  text-align: center;
-}
-
-.bm-moat-bar {
-  align-items: center;
-  background: linear-gradient(90deg, var(--bm-navy-950), var(--bm-electric));
-  border-radius: 8px;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-  padding: 1.2rem;
-  text-align: center;
-}
-
-.bm-moat-bar strong:first-child {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.bm-moat-bar strong:last-child {
+.bm-value-simulator__copy h2 {
   color: #ffffff;
+  font-family: 'Inter Tight', 'Arimo', sans-serif !important;
+  font-size: clamp(2.15rem, 4vw, 4rem);
+  font-weight: 850;
+  letter-spacing: 0;
+  line-height: 0.98;
+  margin: 0;
+  max-width: 860px;
+}
+
+.bm-value-simulator__copy p {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: clamp(1.02rem, 1.45vw, 1.22rem);
+  line-height: 1.52;
+  margin: 1.15rem 0 0;
+  max-width: 780px;
+}
+
+.bm-value-simulator__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.65rem;
+}
+
+.bm-value-simulator__copy small {
+  color: rgba(255, 255, 255, 0.56);
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-top: 1.25rem;
+  max-width: 680px;
+}
+
+.bm-value-share-card {
+  background:
+    radial-gradient(circle at 76% 18%, rgba(143, 233, 243, 0.18), transparent 34%),
+    rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(143, 233, 243, 0.22);
+  border-radius: 8px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 24rem;
+  padding: clamp(1.3rem, 2.6vw, 2rem);
+}
+
+.bm-value-share-card__metric {
+  border-bottom: 1px solid rgba(143, 233, 243, 0.18);
+  padding-bottom: 1.4rem;
+}
+
+.bm-value-share-card__metric strong {
+  color: var(--bm-cyan-300);
+  display: block;
+  font-size: clamp(4.2rem, 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.82;
+}
+
+.bm-value-share-card__metric span {
+  color: #ffffff;
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 850;
+  line-height: 1.18;
+  margin-top: 0.75rem;
+  max-width: 320px;
+}
+
+.bm-value-share-card__bars {
+  display: grid;
+  gap: 0.95rem;
+  margin: 1.4rem 0;
+}
+
+.bm-value-share-card__bars div {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.bm-value-share-card__bars span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.83rem;
+  font-weight: 760;
+}
+
+.bm-value-share-card__bars strong {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  display: block;
+  height: 0.62rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.bm-value-share-card__bars strong::before {
+  background: linear-gradient(90deg, var(--bm-cyan-500), var(--bm-electric));
+  border-radius: inherit;
+  content: "";
+  inset: 0 auto 0 0;
+  position: absolute;
+  width: var(--share);
+}
+
+.bm-value-share-card p {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin: 0;
 }
 
 .bm-proof-grid {
@@ -4855,13 +4892,16 @@ body.advisory-page .brand-nav span {
 }
 
 body.home-page .brand-nav span,
+body.home-page .brand-nav a.is-active,
 body.home-page .brand-nav a:hover,
 body.advisory-page .brand-nav span,
+body.advisory-page .brand-nav a.is-active,
 body.advisory-page .brand-nav a:hover {
   color: #ffffff;
 }
 
 body.home-page .brand-nav span::after,
+body.home-page .brand-nav a.is-active::after,
 body.advisory-page .brand-nav span::after {
   background: var(--bm-cyan-300);
   border-radius: 999px;
@@ -4890,7 +4930,7 @@ body.advisory-page .brand-nav span::after {
   .bm-hero__inner,
   .bm-product-map,
   .bm-engine-flow,
-  .bm-moat-layout {
+  .bm-value-simulator__inner {
     grid-template-columns: 1fr;
   }
 

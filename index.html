@@ -49,9 +49,11 @@
 	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
 		<div class="container">
 			<div class="brand-nav" aria-label="Choose a BlueMaat path">
-				<span aria-current="page">Technology</span>
+				<a href="#bm-hero" class="is-active" aria-current="page">About</a>
+				<a href="#bm-technology">Technology</a>
 				<a href="#bm-product">Product</a>
-				<a href="advisory.html">Advisory</a>
+				<a href="#bm-value">Value creation</a>
+				<a href="#form02-1x">Contact</a>
 			</div>
 			
 			
@@ -192,7 +194,7 @@
     </div>
   </section>
 
-  <section class="bm-value bm-section">
+  <section class="bm-value bm-section" id="bm-value">
     <div class="bm-section-head bm-section-head--left">
       <span class="bm-kicker">Economic value</span>
       <h2>From optimization to measurable financial impact</h2>
@@ -222,33 +224,40 @@
     </div>
   </section>
 
-  <section class="bm-moat bm-section" id="bm-moat">
-    <div class="bm-section-head">
-      <span class="bm-kicker">Moat</span>
-      <h2>Trusted battery intelligence cannot be built overnight.</h2>
-      <p>Software can be copied. Operational learning cannot.</p>
-    </div>
-    <div class="bm-moat-layout">
-      <div class="bm-disciplines">
-        <h3>Six critical disciplines</h3>
-        <div><span>01</span>Battery degradation science</div>
-        <div><span>02</span>Battery behaviour reconstruction</div>
-        <div><span>03</span>Charging infrastructure</div>
-        <div><span>04</span>Fleet operations</div>
-        <div><span>05</span>Energy markets and flexibility</div>
-        <div><span>06</span>Multi-objective optimization</div>
+  <section class="bm-value-simulator bm-section" id="bm-value-simulator">
+    <div class="bm-value-simulator__inner">
+      <div class="bm-value-simulator__copy">
+        <span class="bm-kicker">Fleet value potential</span>
+        <h2>Up to 60% of fleet energy management value can come from the battery economic asset.</h2>
+        <p>
+          Energy cost and peak demand matter. But in EV fleets, the battery is often the largest unmanaged value pool. BlueMaat helps operators estimate how battery lifetime, charging cost and site power decisions combine into measurable value.
+        </p>
+        <div class="bm-value-simulator__actions">
+          <a class="bm-button bm-button--primary" href="#form02-1x">Estimate your fleet value potential - Ask for a demo</a>
+          <a class="bm-button bm-button--secondary" href="#bm-product">See how BlueMaat creates value</a>
+        </div>
+        <small>Indicative value estimate based on BlueMaat POC modelling. Detailed results depend on fleet usage, tariffs, charging infrastructure and operating constraints.</small>
       </div>
-      <div class="bm-learning-loop">
-        <h3>Operational learning loop</h3>
-        <ol>
-          <li>Real fleet deployments</li>
-          <li>Operational battery data</li>
-          <li>Battery behaviour reconstruction</li>
-          <li>Model validation</li>
-          <li>Better decisions</li>
-          <li>Higher customer value</li>
-          <li>More customers and more data</li>
-        </ol>
+      <div class="bm-value-share-card" aria-label="Battery value share illustration">
+        <div class="bm-value-share-card__metric">
+          <strong>60%</strong>
+          <span>potential value from battery lifetime optimization</span>
+        </div>
+        <div class="bm-value-share-card__bars">
+          <div>
+            <span>Battery asset value</span>
+            <strong style="--share: 60%"></strong>
+          </div>
+          <div>
+            <span>Energy cost savings</span>
+            <strong style="--share: 25%"></strong>
+          </div>
+          <div>
+            <span>Peak optimization</span>
+            <strong style="--share: 15%"></strong>
+          </div>
+        </div>
+        <p>POC value estimate includes battery lifetime, energy cost and peak optimization. Renewable optimization, solar self-consumption and flexibility revenues are not included.</p>
       </div>
     </div>
   </section>
@@ -275,7 +284,7 @@
             <div class="col-12 content-head">
                 <div class="mbr-section-head mb-5">
                     <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Contact</strong>
+                        <strong>Contact us</strong>
                     </h3>
                     
                 </div>
