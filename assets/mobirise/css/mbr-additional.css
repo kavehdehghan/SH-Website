@@ -4873,7 +4873,7 @@ body.home-page .brand-nav,
 body.advisory-page .brand-nav {
   align-items: center;
   display: flex;
-  gap: clamp(1rem, 2.4vw, 1.8rem);
+  gap: clamp(0.85rem, 1.9vw, 1.55rem);
   pointer-events: auto;
 }
 
@@ -4902,7 +4902,8 @@ body.advisory-page .brand-nav a:hover {
 
 body.home-page .brand-nav span::after,
 body.home-page .brand-nav a.is-active::after,
-body.advisory-page .brand-nav span::after {
+body.advisory-page .brand-nav span::after,
+body.advisory-page .brand-nav a.is-active::after {
   background: var(--bm-cyan-300);
   border-radius: 999px;
   bottom: -0.35rem;
