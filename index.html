@@ -22,7 +22,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:400,500,600,700,400i,500i,600i,700i&display=swap"></noscript>
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=BlueMaat20260824b"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=BlueMaat20260824b" type="text/css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=BlueMaat20260826g"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=BlueMaat20260826g" type="text/css">
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CRMS4BT3YB"></script>
@@ -52,6 +52,7 @@
 				<a href="#bm-hero" class="is-active" aria-current="page">About</a>
 				<a href="#bm-technology">Technology</a>
 				<a href="#bm-product">Product</a>
+				<a href="#bm-value-simulator">Value simulator</a>
 				<a href="#bm-value">Value creation</a>
 				<a href="advisory.html">Advisory</a>
 				<a href="#form02-1x">Contact</a>
@@ -161,6 +162,89 @@
     <div class="bm-product-visual">
       <img src="assets/images/bluemaat-product-dashboard.png" alt="BlueMaat Battery Intelligence Platform dashboard">
     </div>
+    <div class="bm-product-visual bm-mini-simulator" id="bm-value-simulator" aria-label="BlueMaat fleet value simulator">
+      <div class="bm-mini-simulator__head">
+        <div>
+          <span class="bm-kicker">POC value simulator</span>
+          <h3>Estimate the value potential of a battery-aware EV fleet.</h3>
+        </div>
+      </div>
+      <div class="bm-mini-simulator__grid">
+        <form class="bm-mini-simulator__controls">
+          <label>
+            <span>Fleet size</span>
+            <input id="bmSimFleet" type="range" min="20" max="150" step="10" value="100">
+            <strong><output id="bmSimFleetOut">100 EVs</output></strong>
+          </label>
+          <label>
+            <span>Daily distance</span>
+            <input id="bmSimKm" type="range" min="20" max="140" step="5" value="60">
+            <strong><output id="bmSimKmOut">60 km / EV</output></strong>
+          </label>
+          <label>
+            <span>Battery size</span>
+            <input id="bmSimBattery" type="range" min="30" max="75" step="5" value="45">
+            <strong><output id="bmSimBatteryOut">45 kWh</output></strong>
+          </label>
+          <label>
+            <span>Site power capacity</span>
+            <input id="bmSimSiteCap" type="range" min="50" max="220" step="10" value="120">
+            <strong><output id="bmSimSiteCapOut">120 kW</output></strong>
+          </label>
+          <div class="bm-mini-simulator__auto">
+            <span>Estimated installed chargers</span>
+            <strong><output id="bmSimChargersOut">20 chargers</output></strong>
+          </div>
+          <div class="bm-mini-simulator__auto secondary">
+            <span>Simultaneous active chargers</span>
+            <strong><output id="bmSimActiveChargersOut">17 active</output></strong>
+          </div>
+          <p>Installed chargers are estimated from fleet size, daily energy need and battery size. Site power capacity limits how many chargers can be active at the same time.</p>
+        </form>
+        <div class="bm-mini-simulator__results">
+          <div class="bm-mini-simulator__metric primary">
+            <span>Estimated yearly value</span>
+            <strong id="bmSimTotalValue">EUR 0</strong>
+            <small id="bmSimPerVehicle">EUR 0 / vehicle</small>
+          </div>
+          <div class="bm-mini-simulator__split" aria-label="Estimated value split">
+            <div class="bm-mini-simulator__split-head">
+              <span>Total value creation split</span>
+              <strong id="bmSimBatteryShare">0% battery value</strong>
+            </div>
+            <div class="bm-mini-simulator__stacked-bar">
+              <i id="bmSimBatterySegment" class="battery"></i>
+              <i id="bmSimEnergySegment" class="energy"></i>
+              <i id="bmSimPeakSegment" class="peak"></i>
+            </div>
+            <div class="bm-mini-simulator__legend">
+              <span><i class="battery"></i>Battery value</span>
+              <span><i class="energy"></i>Energy optimization</span>
+              <span><i class="peak"></i>Peak shaving</span>
+            </div>
+          </div>
+          <div class="bm-mini-simulator__metrics">
+            <div class="is-battery">
+              <span>Battery value preserved</span>
+              <strong id="bmSimBatteryValue">EUR 0</strong>
+            </div>
+            <div>
+              <span>Energy cost savings</span>
+              <strong id="bmSimEnergyValue">EUR 0</strong>
+            </div>
+            <div>
+              <span>Peak optimization</span>
+              <strong id="bmSimPeakValue">EUR 0</strong>
+            </div>
+          </div>
+          <a class="bm-button bm-button--primary" href="#form02-1x">Ask for a demo</a>
+        </div>
+      </div>
+      <div class="bm-mini-simulator__note">
+        <p>Default assumptions are pre-filled. Results are indicative and include battery lifetime, energy cost and peak optimization only.</p>
+        <p>Solar self-consumption, renewable optimization and flexibility revenues are not included in this public POC estimate.</p>
+      </div>
+    </div>
     <div class="bm-differentiator">
       <strong>The EV industry optimizes charging infrastructure.</strong>
       <strong>BlueMaat optimizes also the battery itself as an economic asset.</strong>
@@ -225,44 +309,6 @@
     </div>
   </section>
 
-  <section class="bm-value-simulator bm-section" id="bm-value-simulator">
-    <div class="bm-value-simulator__inner">
-      <div class="bm-value-simulator__copy">
-        <span class="bm-kicker">Fleet value potential</span>
-        <h2>Up to 60% of fleet energy management value can come from the battery economic asset.</h2>
-        <p>
-          Energy cost and peak demand matter. But in EV fleets, the battery is often the largest unmanaged value pool. BlueMaat helps operators estimate how battery lifetime, charging cost and site power decisions combine into measurable value.
-        </p>
-        <div class="bm-value-simulator__actions">
-          <a class="bm-button bm-button--primary" href="#form02-1x">Estimate your fleet value potential - Ask for a demo</a>
-          <a class="bm-button bm-button--secondary" href="#bm-product">See how BlueMaat creates value</a>
-        </div>
-        <small>Indicative value estimate based on BlueMaat POC modelling. Detailed results depend on fleet usage, tariffs, charging infrastructure and operating constraints.</small>
-      </div>
-      <div class="bm-value-share-card" aria-label="Battery value share illustration">
-        <div class="bm-value-share-card__metric">
-          <strong>60%</strong>
-          <span>potential value from battery lifetime optimization</span>
-        </div>
-        <div class="bm-value-share-card__bars">
-          <div>
-            <span>Battery asset value</span>
-            <strong style="--share: 60%"></strong>
-          </div>
-          <div>
-            <span>Energy cost savings</span>
-            <strong style="--share: 25%"></strong>
-          </div>
-          <div>
-            <span>Peak optimization</span>
-            <strong style="--share: 15%"></strong>
-          </div>
-        </div>
-        <p>POC value estimate includes battery lifetime, energy cost and peak optimization. Renewable optimization, solar self-consumption and flexibility revenues are not included.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="bm-proof bm-section">
     <div class="bm-section-head bm-section-head--left">
       <span class="bm-kicker">Proof of value</span>
@@ -317,7 +363,91 @@
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://bluemaat.com/" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://bluemaat.com/">BlueMaat<sup>©</sup> 2026</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
+</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://bluemaat.com/" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://bluemaat.com/">BlueMaat<sup>©</sup> 2026</a></section><script>
+  (() => {
+    const fields = {
+      fleet: document.getElementById("bmSimFleet"),
+      km: document.getElementById("bmSimKm"),
+      battery: document.getElementById("bmSimBattery"),
+      siteCap: document.getElementById("bmSimSiteCap"),
+    };
+
+    if (!fields.fleet) return;
+
+    const outputs = {
+      fleet: document.getElementById("bmSimFleetOut"),
+      km: document.getElementById("bmSimKmOut"),
+      battery: document.getElementById("bmSimBatteryOut"),
+      siteCap: document.getElementById("bmSimSiteCapOut"),
+      chargers: document.getElementById("bmSimChargersOut"),
+      activeChargers: document.getElementById("bmSimActiveChargersOut"),
+      total: document.getElementById("bmSimTotalValue"),
+      perVehicle: document.getElementById("bmSimPerVehicle"),
+      batteryValue: document.getElementById("bmSimBatteryValue"),
+      energyValue: document.getElementById("bmSimEnergyValue"),
+      peakValue: document.getElementById("bmSimPeakValue"),
+      batteryShare: document.getElementById("bmSimBatteryShare"),
+      batterySegment: document.getElementById("bmSimBatterySegment"),
+      energySegment: document.getElementById("bmSimEnergySegment"),
+      peakSegment: document.getElementById("bmSimPeakSegment"),
+    };
+
+    const euro = (value) => `EUR ${Math.round(value).toLocaleString("en-US")}`;
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+    function updateSimulator() {
+      const fleet = Number(fields.fleet.value);
+      const km = Number(fields.km.value);
+      const battery = Number(fields.battery.value);
+      const siteCap = Number(fields.siteCap.value);
+      const chargerPower = battery >= 60 ? 11 : 7;
+      const consumption = 0.18 + Math.max(0, battery - 45) * 0.002;
+      const dailyEnergy = fleet * km * consumption;
+      const overnightHours = 10;
+      const chargerUtilization = 0.75;
+      const chargersByAccess = Math.ceil(fleet / 5);
+      const chargersByEnergy = Math.ceil(dailyEnergy / (chargerPower * overnightHours * chargerUtilization));
+      const installedChargers = Math.max(chargersByAccess, chargersByEnergy);
+      const activeChargers = Math.max(1, Math.min(installedChargers, Math.floor(siteCap / chargerPower)));
+
+      outputs.fleet.value = `${fleet} EVs`;
+      outputs.km.value = `${km} km / EV`;
+      outputs.battery.value = `${battery} kWh`;
+      outputs.siteCap.value = `${siteCap} kW`;
+      outputs.chargers.value = `${installedChargers} chargers`;
+      outputs.activeChargers.value = `${activeChargers} active`;
+
+      const fleetScale = fleet / 100;
+      const usageScale = km / 60;
+      const batteryScale = Math.pow(battery / 45, 0.7);
+      const chargerPressure = clamp((fleet / Math.max(activeChargers, 1)) / 5, 0.7, 1.55);
+      const sitePressure = clamp((fleet * 7) / Math.max(siteCap, 1) / 5.88, 0.75, 1.6);
+
+      const batteryValue = (101419 / 5) * fleetScale * usageScale * batteryScale;
+      const energySavings = (36000 / 5) * fleetScale * usageScale * clamp(1 + (chargerPressure - 1) * 0.16, 0.82, 1.22);
+      const peakSavings = (30105 / 5) * fleetScale * clamp(1 + (sitePressure - 1) * 0.45, 0.7, 1.42);
+      const total = batteryValue + energySavings + peakSavings;
+
+      outputs.total.textContent = euro(total);
+      outputs.perVehicle.textContent = `${euro(total / fleet)} / vehicle / year`;
+      outputs.batteryValue.textContent = euro(batteryValue);
+      outputs.energyValue.textContent = euro(energySavings);
+      outputs.peakValue.textContent = euro(peakSavings);
+
+      const batteryShare = (100 * batteryValue) / total;
+      const energyShare = (100 * energySavings) / total;
+      const peakShare = (100 * peakSavings) / total;
+      outputs.batteryShare.textContent = `${batteryShare.toFixed(0)}% battery value`;
+      outputs.batterySegment.style.setProperty("--share", `${batteryShare}%`);
+      outputs.energySegment.style.setProperty("--share", `${energyShare}%`);
+      outputs.peakSegment.style.setProperty("--share", `${peakShare}%`);
+
+    }
+
+    Object.values(fields).forEach((field) => field.addEventListener("input", updateSimulator));
+    updateSimulator();
+  })();
+</script><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
   
   
 </body>
