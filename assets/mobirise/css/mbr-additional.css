@@ -4514,17 +4514,21 @@ body.home-page .brand-pathway-link span {
 .bm-team-grid {
   display: grid;
   gap: 1.15rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .bm-person-card {
+  align-content: start;
+  min-width: 0;
   background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
   border: 1px solid var(--bm-line);
   border-radius: 8px;
   box-shadow: 0 18px 44px rgba(4, 21, 47, 0.07);
   display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
   gap: 1.15rem;
-  padding: clamp(1.3rem, 2.2vw, 2rem);
+  padding: 1.15rem;
 }
 
 .bm-person-card--advisor {
@@ -4532,8 +4536,9 @@ body.home-page .brand-pathway-link span {
 }
 
 .bm-person-card__top {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -4572,7 +4577,7 @@ body.home-page .brand-pathway-link span {
   display: block;
   font-size: 0.82rem;
   font-weight: 850;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -4580,23 +4585,25 @@ body.home-page .brand-pathway-link span {
 .bm-person-card h3 {
   color: var(--bm-navy-900);
   font-family: 'Inter Tight', 'Arimo', sans-serif !important;
-  font-size: clamp(1.6rem, 2.2vw, 2.25rem);
-  font-weight: 900;
+  font-size: 1.15rem;
+  font-weight: 600;
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 1.25;
   margin: 0.35rem 0 0;
 }
 
 .bm-person-card p {
   color: var(--bm-text);
-  font-size: 1.02rem;
+  font-size: 0.95rem;
   line-height: 1.48;
   margin: 0;
 }
 
 .bm-person-card ul {
   display: grid;
-  gap: 0.55rem;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  gap: 1.15rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -5709,7 +5716,6 @@ body.advisory-page .brand-nav a.is-active::after {
   .bm-mini-simulator__head,
   .bm-mini-simulator__grid,
   .bm-engine-flow,
-  .bm-team-grid,
   .bm-poc-layout,
   .bm-poc-thermal__grid,
   .bm-poc-workflow,
@@ -5717,6 +5723,8 @@ body.advisory-page .brand-nav a.is-active::after {
   .bm-poc-workflow__results {
     grid-template-columns: 1fr;
   }
+
+  .bm-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .bm-poc-workflow__statement span {
     border-bottom: 3px solid var(--bm-cyan-300);
@@ -5744,6 +5752,7 @@ body.advisory-page .brand-nav a.is-active::after {
 }
 
 @media (max-width: 767px) {
+  .bm-team-grid { grid-template-columns: 1fr; }
   .home-page .navbar,
   .advisory-page .navbar {
     border-radius: 28px !important;
