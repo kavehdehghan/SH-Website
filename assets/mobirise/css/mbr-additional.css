@@ -4439,6 +4439,12 @@ body.home-page .brand-pathway-link span {
   color: var(--bm-muted);
 }
 
+.bm-problem-grid .bm-roadmap-stage {
+  color: var(--bm-blue-700);
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+
 .bm-icon {
   background: rgba(143, 233, 243, 0.12);
   border: 1px solid rgba(143, 233, 243, 0.22);
